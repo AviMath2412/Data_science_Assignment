@@ -1,4 +1,4 @@
-# Celebal Technologies — Summer Internship (ML Foundations)
+# Celebal Technologies - Summer Internship
 
 Personal coursework repository for a **2-month summer internship** at [Celebal Technologies](https://www.celebaltechnologies.com/). Weekly assignments on Python, data science, and machine learning fundamentals are submitted here as Jupyter notebooks.
 
