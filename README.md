@@ -15,16 +15,17 @@ Assignments are added to this repo as they are released. Expected pattern:
 ```
 .
 ├── README.md
-├── week1_Avi_Mathur.ipynb    # Python Fundamentals (complete)
-├── week2_Avi_Mathur.ipynb    # upcoming
-├── week3_Avi_Mathur.ipynb    # upcoming
+├── tesla_deliveries_dataset_2015_2025.csv   # Tesla sales & production dataset
+├── week1_Avi_Mathur.ipynb                   # Python Fundamentals (complete)
+├── week2_Avi_Mathur.ipynb                   # End-to-End ML Pipeline (complete)
+├── week3_Avi_Mathur.ipynb                   # upcoming
 └── ...
 ```
 
 | Week | Notebook | Topics | Status |
 |------|----------|--------|--------|
 | 1 | `week1_Avi_Mathur.ipynb` | Python, NumPy, Pandas, linear algebra, statistics, probability | Done |
-| 2 | `week2_Avi_Mathur.ipynb` | TBD | Upcoming |
+| 2 | `week2_Avi_Mathur.ipynb` | End-to-End ML Pipeline (Preprocessing, EDA, Regression, Forecasting) | Done |
 | 3+ | … | Per internship schedule | Upcoming |
 
 ---
@@ -37,6 +38,15 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 2 — End-to-End ML Pipeline on Tesla Data
+
+- **Data Preprocessing & Pipelines:** Handled missing values, scaled numerical features, and one-hot encoded categorical features using scikit-learn's `Pipeline` and `ColumnTransformer`.
+- **Exploratory Data Analysis (EDA):** Visualized deliveries and production trends by region/model over time, analyzed correlation matrices, and delivery distributions.
+- **Regression Modeling & Tuning:** Built and evaluated `LinearRegression` and `RandomForestRegressor` models to predict `Estimated_Deliveries`. Performed hyperparameter tuning using `GridSearchCV`.
+- **Forecasting Insights:** Built a forecasting model leveraging lag-based features and chronological train-test splits to predict future Tesla delivery trends.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code / Cursor or Jupyter.
@@ -45,6 +55,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 4. Confirm all `assert` cells pass and plots render with titles and axis labels.
 
 Week 1 should run top-to-bottom without errors after Part 3 creates `df_filled` (used in later sections).
+Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the root directory.
 
 ---
 
@@ -63,4 +74,4 @@ Week 1 should run top-to-bottom without errors after Part 3 creates `df_filled` 
 
 ---
 
-*Last updated: May 2026 — Week 1 complete.*
+*Last updated: May 2026 — Week 2 complete.*
