@@ -49,7 +49,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ## Running a notebook
 
-1. Open the repo in VS Code / Cursor or Jupyter.
+1. Open the repo in VS Code or Jupyter.
 2. Select a kernel with the packages above installed.
 3. **Kernel → Restart & Run All** on the target notebook.
 4. Confirm all `assert` cells pass and plots render with titles and axis labels.
@@ -61,16 +61,13 @@ Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the ro
 
 ## Submission convention
 
-- Save notebooks as `week<number>_Avi_Mathur.ipynb`.
-- Keep assignment instructions and cell structure unchanged unless told otherwise.
-- Fill all `# YOUR CODE HERE` cells and reflection markdown in your own words before pushing.
+- Saved my notebooks as `week<number>_Avi_Mathur.ipynb`.
 
 ---
 
 ## Notes
 
 - This repo is for **internship assignments only**; new weeks will be committed as they are assigned.
-- Do not commit secrets, API keys, or private datasets.
 
 ---
 
