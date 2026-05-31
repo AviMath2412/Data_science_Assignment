@@ -42,7 +42,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 - **Data Preprocessing & Pipelines:** Handled missing values, scaled numerical features, and one-hot encoded categorical features using scikit-learn's `Pipeline` and `ColumnTransformer`.
 - **Exploratory Data Analysis (EDA):** Visualized deliveries and production trends by region/model over time, analyzed correlation matrices, and delivery distributions.
-- **Regression Modeling & Tuning:** Built and evaluated `LinearRegression` and `RandomForestRegressor` models to predict `Estimated_Deliveries`. Performed hyperparameter tuning using `GridSearchCV`.
+- **Regression Modeling & Tuning:** Built and evaluated `LinearRegression`, `Ridge` (L2), and `Lasso` (L1) models to predict `Estimated_Deliveries`. Performed hyperparameter tuning using `GridSearchCV`.
 - **Forecasting Insights:** Built a forecasting model leveraging lag-based features and chronological train-test splits to predict future Tesla delivery trends.
 
 ---
