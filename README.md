@@ -15,10 +15,11 @@ Assignments are added to this repo as they are released. Expected pattern:
 ```
 .
 ├── README.md
+├── Customer-data.csv                        # Customer behavior & churn dataset
 ├── tesla_deliveries_dataset_2015_2025.csv   # Tesla sales & production dataset
 ├── week1_Avi_Mathur.ipynb                   # Python Fundamentals (complete)
 ├── week2_Avi_Mathur.ipynb                   # End-to-End ML Pipeline (complete)
-├── week3_Avi_Mathur.ipynb                   # upcoming
+├── week3_Avi_Mathur.ipynb                   # Customer Intelligence System (complete)
 └── ...
 ```
 
@@ -26,7 +27,8 @@ Assignments are added to this repo as they are released. Expected pattern:
 |------|----------|--------|--------|
 | 1 | `week1_Avi_Mathur.ipynb` | Python, NumPy, Pandas, linear algebra, statistics, probability | Done |
 | 2 | `week2_Avi_Mathur.ipynb` | End-to-End ML Pipeline (Preprocessing, EDA, Regression, Forecasting) | Done |
-| 3+ | … | Per internship schedule | Upcoming |
+| 3 | `week3_Avi_Mathur.ipynb` | Customer Intelligence System (Feature Engineering, Classification, Clustering) | Done |
+| 4+ | … | Per internship schedule | Upcoming |
 
 ---
 
@@ -47,6 +49,15 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 3 — Customer Intelligence System
+
+- **Feature Engineering & Preprocessing:** Engineered a composite **Loyalty Score** combining normalized spending score, frequency, and inverse recency. Applied log transformations to right-skewed columns (`Monetary` and `Annual_Income`) to stabilize variance. Scaled features and prepared stratified splits.
+- **Supervised Classification:** Trained and cross-validated Logistic Regression, Random Forest, and XGBoost models to predict customer value segments (`Low-Value`, `Mid-Value`, `High-Value`). Logistic Regression achieved the highest classification test accuracy of **98.5%**.
+- **Unsupervised Clustering:** Grouped customers using K-Means ($K=2$) and DBSCAN ($\epsilon=1.2$) based on Recency, Frequency, and Monetary (RFM) metrics. Visualized and profiled natural groupings.
+- **Priority Customer Retention:** Developed a Retention Priority Score to identify high-risk, high-value active customers, mapping priority tiers to assist targeted marketing campaigns.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code or Jupyter.
@@ -56,6 +67,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 Week 1 should run top-to-bottom without errors after Part 3 creates `df_filled` (used in later sections).
 Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the root directory.
+Week 3 requires `Customer-data.csv` to be present in the root directory.
 
 ---
 
@@ -71,4 +83,4 @@ Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the ro
 
 ---
 
-*Last updated: May 2026 — Week 2 complete.*
+*Last updated: June 2026 — Week 3 complete.*
