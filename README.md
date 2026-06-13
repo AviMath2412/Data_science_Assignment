@@ -20,6 +20,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 ├── week1_Avi_Mathur.ipynb                   # Python Fundamentals (complete)
 ├── week2_Avi_Mathur.ipynb                   # End-to-End ML Pipeline (complete)
 ├── week3_Avi_Mathur.ipynb                   # Customer Intelligence System (complete)
+├── week4_Avi_Mathur.ipynb                   # CIFAR-10 Image Classification (complete)
 └── ...
 ```
 
@@ -28,7 +29,8 @@ Assignments are added to this repo as they are released. Expected pattern:
 | 1 | `week1_Avi_Mathur.ipynb` | Python, NumPy, Pandas, linear algebra, statistics, probability | Done |
 | 2 | `week2_Avi_Mathur.ipynb` | End-to-End ML Pipeline (Preprocessing, EDA, Regression, Forecasting) | Done |
 | 3 | `week3_Avi_Mathur.ipynb` | Customer Intelligence System (Feature Engineering, Classification, Clustering) | Done |
-| 4+ | … | Per internship schedule | Upcoming |
+| 4 | `week4_Avi_Mathur.ipynb` | CIFAR-10 Image Classification (ANN vs CNN, Data Augmentation) | Done |
+| 5+ | … | Per internship schedule | Upcoming |
 
 ---
 
@@ -58,6 +60,15 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 4 — CIFAR-10 Image Classification (ANN vs CNN)
+
+- **Problem Definition:** Built image classification models on the **CIFAR-10 dataset** containing 60,000 color images (32×32×3 pixels) across 10 classes (Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck) to study deep learning fundamentals.
+- **Artificial Neural Networks (ANN):** Implemented an ANN model treating images as flat vectors. Demonstrated why ANNs fail to preserve spatial structures, resulting in a baseline test accuracy of **42.4%**.
+- **Convolutional Neural Networks (CNN):** Designed a CNN with convolutional layers, batch normalization, max pooling, dropout, and early stopping. Demonstrated the superiority of CNNs in extracting spatial features, achieving a test accuracy of **70.1%**.
+- **Training Strategy Upgrades:** Implemented and evaluated **Data Augmentation** (horizontal flips, rotation, and zoom) as a modernization strategy to improve generalization and mitigate overfitting.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code or Jupyter.
@@ -68,6 +79,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 Week 1 should run top-to-bottom without errors after Part 3 creates `df_filled` (used in later sections).
 Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the root directory.
 Week 3 requires `Customer-data.csv` to be present in the root directory.
+Week 4 automatically downloads the CIFAR-10 dataset via Keras on the first execution (requires internet connection).
 
 ---
 
@@ -83,4 +95,4 @@ Week 3 requires `Customer-data.csv` to be present in the root directory.
 
 ---
 
-*Last updated: June 2026 — Week 3 complete.*
+*Last updated: June 2026 — Week 4 complete.*
