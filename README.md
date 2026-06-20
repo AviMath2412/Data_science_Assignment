@@ -21,7 +21,7 @@ Assignments are added to this repo as they are released. Expected pattern:
 ├── week2_Avi_Mathur.ipynb                   # End-to-End ML Pipeline (complete)
 ├── week3_Avi_Mathur.ipynb                   # Customer Intelligence System (complete)
 ├── week4_Avi_Mathur.ipynb                   # CIFAR-10 Image Classification (complete)
-├── week5_Avi_Mathur.ipynb                   # Deep Learning Text Generation (complete)
+├── week5_Avi_Mathur.ipynb                   # RNN(complete)
 └── ...
 ```
 
