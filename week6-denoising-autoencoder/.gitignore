@@ -1,0 +1,4 @@
+mnist_png/
+.venv/
+__pycache__/
+.ipynb_checkpoints/

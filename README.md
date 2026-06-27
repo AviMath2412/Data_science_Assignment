@@ -22,6 +22,9 @@ Assignments are added to this repo as they are released. Expected pattern:
 ├── week3_Avi_Mathur.ipynb                   # Customer Intelligence System (complete)
 ├── week4_Avi_Mathur.ipynb                   # CIFAR-10 Image Classification (complete)
 ├── week5_Avi_Mathur.ipynb                   # RNN(complete)
+├── week6-denoising-autoencoder/
+│   ├── README.md                            # Dataset instructions
+│   └── week6_Avi_Mathur.ipynb               # MNIST Denoising Autoencoder (complete)
 └── ...
 ```
 
@@ -32,7 +35,8 @@ Assignments are added to this repo as they are released. Expected pattern:
 | 3 | `week3_Avi_Mathur.ipynb` | Customer Intelligence System (Feature Engineering, Classification, Clustering) | Done |
 | 4 | `week4_Avi_Mathur.ipynb` | CIFAR-10 Image Classification (ANN vs CNN, Data Augmentation) | Done |
 | 5 | `week5_Avi_Mathur.ipynb` | Deep Learning Text Generation (RNN, LSTM, GRU) | Done |
-| 6+ | … | Per internship schedule | Upcoming |
+| 6 | `week6-denoising-autoencoder/week6_Avi_Mathur.ipynb` | MNIST Image Denoising Autoencoder (Convolutional Autoencoder, Noise Robustness Experiment) | Done |
+| 7+ | … | Per internship schedule | Upcoming |
 
 ---
 
@@ -82,6 +86,17 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 6 — MNIST Image Denoising Autoencoder
+
+- **Problem Definition:** Designed and trained a Convolutional Denoising Autoencoder on the MNIST dataset (60,000 training, 10,000 testing images) to remove Gaussian noise while preserving character/digit structure.
+- **Model Architecture:** Implemented a symmetric encoder-decoder architecture:
+  - **Encoder:** Input (28×28×1) → Conv2D (32, ReLU) → MaxPooling2D → Conv2D (64, ReLU) → MaxPooling2D, compressing images to a compact latent representation.
+  - **Decoder:** Conv2D (64, ReLU) → UpSampling2D → Conv2D (32, ReLU) → UpSampling2D → Conv2D (1, Sigmoid), reconstructing the original pixel space.
+- **Training Setup:** Trained using the Adam optimizer and Binary Crossentropy loss with a validation split of 10% for 15 epochs, reducing reconstruction loss down to `~0.0840` (training) and `~0.0935` (validation).
+- **Noise Robustness Experiment:** Evaluated denoising capability under varying Gaussian noise factors (0.2, 0.4, and 0.6) to demonstrate the model's structural preservation and reconstruction limits under high distortion.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code or Jupyter.
@@ -94,6 +109,7 @@ Week 2 requires `tesla_deliveries_dataset_2015_2025.csv` to be present in the ro
 Week 3 requires `Customer-data.csv` to be present in the root directory.
 Week 4 automatically downloads the CIFAR-10 dataset via Keras on the first execution (requires internet connection).
 Week 5 runs self-contained with a built-in custom text corpus on deep learning concepts.
+Week 6 requires the `mnist_png` folder to be downloaded and placed in the project root directory (as specified in `week6-denoising-autoencoder/README.md`).
 
 ---
 
@@ -109,4 +125,4 @@ Week 5 runs self-contained with a built-in custom text corpus on deep learning c
 
 ---
 
-*Last updated: June 2026 — Week 5 complete.*
+*Last updated: June 2026 — Week 6 complete.*
