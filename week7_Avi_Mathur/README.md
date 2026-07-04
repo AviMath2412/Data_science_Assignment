@@ -7,14 +7,14 @@ A high-performance local Retrieval-Augmented Generation (RAG) system built with 
 ```mermaid
 graph TD
     A[User Query] --> B[Hybrid Retriever]
-    B --> C[Vector Dense Search (Ollama nomic-embed-text)]
-    B --> D[Sparse Keyword Search (BM25 Retriever)]
+    B --> C["Vector Dense Search (Ollama nomic-embed-text)"]
+    B --> D["Sparse Keyword Search (BM25 Retriever)"]
     C --> E[Reciprocal Rank Fusion - RRF]
     D --> E
     E --> F[Top-6 Candidate Nodes]
-    F --> G[Cross-Encoder Reranker (BAAI/bge-reranker-base)]
+    F --> G["Cross-Encoder Reranker (BAAI/bge-reranker-base)"]
     G --> H[Top-3 Re-ordered Nodes]
-    H --> I[LLM Response Synthesis (Ollama Mistral)]
+    H --> I["LLM Response Synthesis (Ollama Mistral)"]
     I --> J[Streamlit Chat UI]
 ```
 
