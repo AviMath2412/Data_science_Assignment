@@ -25,6 +25,12 @@ Assignments are added to this repo as they are released. Expected pattern:
 ├── week6-denoising-autoencoder/
 │   ├── README.md                            # Dataset instructions
 │   └── week6_Avi_Mathur.ipynb               # MNIST Denoising Autoencoder (complete)
+├── week7_Avi_Mathur/
+│   ├── README.md                            # RAG System documentation & architecture
+│   ├── app.py                               # Streamlit Web UI
+│   ├── ingest.py                            # ChromaDB ingestion pipeline
+│   ├── query.py                             # CLI test client
+│   └── requirements.txt                     # Requirements dependencies
 └── ...
 ```
 
@@ -36,7 +42,8 @@ Assignments are added to this repo as they are released. Expected pattern:
 | 4 | `week4_Avi_Mathur.ipynb` | CIFAR-10 Image Classification (ANN vs CNN, Data Augmentation) | Done |
 | 5 | `week5_Avi_Mathur.ipynb` | Deep Learning Text Generation (RNN, LSTM, GRU) | Done |
 | 6 | `week6-denoising-autoencoder/week6_Avi_Mathur.ipynb` | MNIST Image Denoising Autoencoder (Convolutional Autoencoder, Noise Robustness Experiment) | Done |
-| 7+ | … | Per internship schedule | Upcoming |
+| 7 | `week7_Avi_Mathur/` | Local Hybrid RAG Core (Streamlit UI, ChromaDB, BM25 Keyword Search, BGE Reranking) | Done |
+| 8+ | … | Per internship schedule | Upcoming |
 
 ---
 
@@ -97,6 +104,15 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 7 — Local Hybrid RAG Core System
+
+- **Multi-Retriever Fusion**: Built a hybrid search query engine fusing dense vector retrieval (Nomic embeddings) and sparse keyword retrieval (BM25) using Reciprocal Rank Fusion (RRF).
+- **Cross-Encoder Reranking**: Integrated `BAAI/bge-reranker-base` to rerank and filter the most critical contexts before presenting them to the LLM.
+- **Latency Optimizations**: Optimized database document parsing for node reconstruction resulting in a 13,000x initialization speedup. Implemented session-level cache-busting to bypass model reloading overhead.
+- **Streamlit Web Application**: Developed a premium user interface with database namespace selection, real-time citation scores, and chat memory clearing.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code or Jupyter.
@@ -110,6 +126,7 @@ Week 3 requires `Customer-data.csv` to be present in the root directory.
 Week 4 automatically downloads the CIFAR-10 dataset via Keras on the first execution (requires internet connection).
 Week 5 runs self-contained with a built-in custom text corpus on deep learning concepts.
 Week 6 requires the `mnist_png` folder to be downloaded and placed in the project root directory (as specified in `week6-denoising-autoencoder/README.md`).
+Week 7 requires a local installation of Ollama (with `mistral` and `nomic-embed-text` pulled) and can be launched using `streamlit run week7_Avi_Mathur/app.py`.
 
 ---
 
@@ -125,4 +142,4 @@ Week 6 requires the `mnist_png` folder to be downloaded and placed in the projec
 
 ---
 
-*Last updated: June 2026 — Week 6 complete.*
+*Last updated: July 2026 — Week 7 complete.*

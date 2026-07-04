@@ -1,0 +1,12 @@
+# Local Chroma database directory
+chroma_db/
+
+# Data directory containing large PDF documents
+data/
+
+# Python caching
+__pycache__/
+*.pyc
+
+# Local system files
+.DS_Store
