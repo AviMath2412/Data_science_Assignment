@@ -15,7 +15,8 @@ week8_Avi_Mathur/
 │   ├── router.py           # Routes queries to appropriate tools
 │   ├── validator.py        # Validates user inputs and schema constraints
 │   ├── verifier.py         # Verifies final output correctness
-│   └── logger.py           # Logs agent reasoning and tool executions
+│   ├── logger.py           # Logs agent reasoning and tool executions
+│   └── memory.py           # Short-term memory for agent conversations
 ├── tools/                  # Extensible Tool Suite
 │   ├── __init__.py
 │   ├── calculator.py       # Safe mathematical expression evaluator
@@ -38,6 +39,7 @@ week8_Avi_Mathur/
 *   **`validator.py`**: Ensures the input received is formatted correctly and safe to process before invoking any tool.
 *   **`verifier.py`**: Performs post-execution checks on tool outputs to ensure they are logically sound and directly answer the user's prompt.
 *   **`logger.py`**: Formats and logs agent executions, showing the "Thought -> Action -> Observation -> Final Answer" loop.
+*   **`memory.py`**: Provides session-based memory using a deque to track the agent's query and response history.
 
 ### 🛠️ Tool Suite
 *   **Calculator (`calculator.py`)**: Parses and evaluates mathematical expressions safely using Python's Abstract Syntax Trees (`ast`), preventing remote code execution vulnerabilities from generic `eval()`.
@@ -72,3 +74,12 @@ Execute the agent tests using the virtual environment's python interpreter:
 ```bash
 python tests/test_agent.py
 ```
+
+### 4. Run the Interactive CLI Agent
+Run the main agent application to start the interactive prompt loop:
+```bash
+python main.py
+```
+*   Type your queries (e.g., `Calculate (100 + 50) / 3`, `Analyze this simple text`, `Extract keywords from this description`).
+*   Type `history` to print out the list of previous queries and responses stored in memory.
+*   Type `exit` to close the agent.

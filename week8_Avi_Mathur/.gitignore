@@ -9,3 +9,4 @@ ENV/
 
 .vscode/
 .idea/
+agent_logs.json

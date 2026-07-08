@@ -31,6 +31,13 @@ Assignments are added to this repo as they are released. Expected pattern:
 │   ├── ingest.py                            # ChromaDB ingestion pipeline
 │   ├── query.py                             # CLI test client
 │   └── requirements.txt                     # Requirements dependencies
+├── week8_Avi_Mathur/
+│   ├── README.md                            # Rule-Based Agentic AI architecture
+│   ├── main.py                              # Interactive Agent CLI loop
+│   ├── requirements.txt                     # Dependencies (NLTK, Pydantic, etc.)
+│   ├── agent/                               # Agent core (Router, Validator, Logger, Memory)
+│   ├── tools/                               # Tool suite (Calculator, Extractor, Stats)
+│   └── tests/                               # Test suite
 └── ...
 ```
 
@@ -43,7 +50,8 @@ Assignments are added to this repo as they are released. Expected pattern:
 | 5 | `week5_Avi_Mathur.ipynb` | Deep Learning Text Generation (RNN, LSTM, GRU) | Done |
 | 6 | `week6-denoising-autoencoder/week6_Avi_Mathur.ipynb` | MNIST Image Denoising Autoencoder (Convolutional Autoencoder, Noise Robustness Experiment) | Done |
 | 7 | `week7_Avi_Mathur/` | Local Hybrid RAG Core (Streamlit UI, ChromaDB, BM25 Keyword Search, BGE Reranking) | Done |
-| 8+ | … | Per internship schedule | Upcoming |
+| 8 | `week8_Avi_Mathur/` | Rule-Based Agentic AI System (Validator, Intent Router, Custom Tools, Memory, Logging) | Done |
+| 9+ | … | Per internship schedule | Upcoming |
 
 ---
 
@@ -113,6 +121,17 @@ Assignments are added to this repo as they are released. Expected pattern:
 
 ---
 
+## Week 8 — Rule-Based Agentic AI System
+
+- **Agent Core Architecture**: Designed and implemented a modular Agentic AI loop from scratch featuring a Query Validator, Rule-based Intent Router, Output Verifier, Short-term Memory, and an execution Logger.
+- **Custom Tool Suite**: Created a package of extensible tools:
+  - **Safe Calculator**: Safe math expression evaluator using python's `ast` (Abstract Syntax Tree) to prevent execution vulnerabilities.
+  - **Keyword Extractor**: Extracts key concepts by tokenizing text, removing custom/NLTK stopwords and punctuation.
+  - **Text Statistics**: Analyzes word counts, sentence counts, and character lengths.
+- **Diagnostics**: Log files (`agent_logs.json`) track chronological query execution metadata: timestamp, routing logic, outputs, verification status, and processing latency.
+
+---
+
 ## Running a notebook
 
 1. Open the repo in VS Code or Jupyter.
@@ -127,6 +146,7 @@ Week 4 automatically downloads the CIFAR-10 dataset via Keras on the first execu
 Week 5 runs self-contained with a built-in custom text corpus on deep learning concepts.
 Week 6 requires the `mnist_png` folder to be downloaded and placed in the project root directory (as specified in `week6-denoising-autoencoder/README.md`).
 Week 7 requires a local installation of Ollama (with `mistral` and `nomic-embed-text` pulled) and can be launched using `streamlit run week7_Avi_Mathur/app.py`.
+Week 8 requires a local python virtual environment to install packages from `week8_Avi_Mathur/requirements.txt` and is executed via `python main.py` or tested via `python tests/test_agent.py`.
 
 ---
 
@@ -142,4 +162,4 @@ Week 7 requires a local installation of Ollama (with `mistral` and `nomic-embed-
 
 ---
 
-*Last updated: July 2026 — Week 7 complete.*
+*Last updated: July 2026 — Week 8 complete.*
