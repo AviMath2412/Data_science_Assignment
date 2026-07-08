@@ -1,17 +1,11 @@
-# Python caching
 **/__pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Local virtual environment
 .venv/
 venv/
 ENV/
-
-# Local system files
 .DS_Store
 
-# IDEs and editors
 .vscode/
 .idea/
