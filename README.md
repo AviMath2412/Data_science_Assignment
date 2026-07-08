@@ -4,7 +4,7 @@ Personal coursework repository for a **2-month summer internship** at [Celebal T
 
 **Intern:** Avi Mathur  
 **Duration:** 2 months (summer)  
-**Format:** One notebook per week
+**Format:** One assignment per week
 
 ---
 
@@ -32,13 +32,12 @@ Assignments are added to this repo as they are released. Expected pattern:
 │   ├── query.py                             # CLI test client
 │   └── requirements.txt                     # Requirements dependencies
 ├── week8_Avi_Mathur/
-│   ├── README.md                            # Rule-Based Agentic AI architecture
-│   ├── main.py                              # Interactive Agent CLI loop
-│   ├── requirements.txt                     # Dependencies (NLTK, Pydantic, etc.)
-│   ├── agent/                               # Agent core (Router, Validator, Logger, Memory)
-│   ├── tools/                               # Tool suite (Calculator, Extractor, Stats)
-│   └── tests/                               # Test suite
-└── ...
+   ├── README.md                            # Rule-Based Agentic AI architecture
+   ├── main.py                              # Interactive Agent CLI loop
+   ├── requirements.txt                     # Dependencies (NLTK, Pydantic, etc.)
+   ├── agent/                               # Agent core (Router, Validator, Logger, Memory)
+   ├── tools/                               # Tool suite (Calculator, Extractor, Stats)
+   └── tests/                               # Test suite
 ```
 
 | Week | Notebook | Topics | Status |
@@ -51,7 +50,6 @@ Assignments are added to this repo as they are released. Expected pattern:
 | 6 | `week6-denoising-autoencoder/week6_Avi_Mathur.ipynb` | MNIST Image Denoising Autoencoder (Convolutional Autoencoder, Noise Robustness Experiment) | Done |
 | 7 | `week7_Avi_Mathur/` | Local Hybrid RAG Core (Streamlit UI, ChromaDB, BM25 Keyword Search, BGE Reranking) | Done |
 | 8 | `week8_Avi_Mathur/` | Rule-Based Agentic AI System (Validator, Intent Router, Custom Tools, Memory, Logging) | Done |
-| 9+ | … | Per internship schedule | Upcoming |
 
 ---
 
