@@ -4,7 +4,7 @@ Personal coursework repository for a **2-month summer internship** at [Celebal T
 
 **Intern:** Avi Mathur  
 **Duration:** 2 months (summer)  
-**Format:** One notebook per week
+**Format:** One assignment per week
 
 ---
 
